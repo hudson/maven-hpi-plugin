@@ -32,6 +32,7 @@
         <end>$}</end>
         <dollar>$</dollar>
         <openbracket>{</openbracket>
+        <maven-gpg-plugin.version>1.2</maven-gpg-plugin.version>
     </properties>
 
     <build>
