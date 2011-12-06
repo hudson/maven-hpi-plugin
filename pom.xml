@@ -18,8 +18,7 @@
   <parent>
     <groupId>org.jvnet.hudson</groupId>
     <artifactId>hudson-parent</artifactId>
-    <version>2.1.1-SNAPSHOT</version>
-    <relativePath>../hudson-parent/pom.xml</relativePath>
+    <version>2.1.2</version>
   </parent>
 
   <groupId>org.jvnet.hudson.tools</groupId>
@@ -27,7 +26,7 @@
   <packaging>maven-plugin</packaging>
   
   <name>Maven hpi Plugin</name>
-  <version>2.1.1-SNAPSHOT </version>
+  <version>3.0.0-SNAPSHOT</version>
 
   <description>
       Support for developing Hudson plugins with Apache Maven.
@@ -153,6 +152,10 @@
         <exclusion>
           <groupId>javax.servlet</groupId>
           <artifactId>servlet-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <artifactId>icu4j</artifactId>
+          <groupId>com.ibm.icu</groupId>
         </exclusion>
       </exclusions>
     </dependency>
