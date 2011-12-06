@@ -30,6 +30,7 @@ import org.kohsuke.stapler.framework.io.IOException2;
 class HpiUtil {
 
     private static final String HUDSON_CORE_GROUP_ID = "org.jvnet.hudson.main";
+    private static final String HUDSON_ECLIPSE_CORE_GROUP_ID = "org.eclipse.hudson.main";
     private static final String HUDSON_CORE_ARTIFACT_ID = "hudson-core";
 
     private static final String[] HUDSON_PLUGIN_HEADERS = {"Plugin-Class","Plugin-Version"};
@@ -63,7 +64,7 @@ class HpiUtil {
 
     static String findHudsonVersion(Collection<Artifact> artifacts, Log log) {
         for(Artifact a :artifacts) {
-            if(HUDSON_CORE_GROUP_ID.equals(a.getGroupId()) &&
+            if((HUDSON_CORE_GROUP_ID.equals(a.getGroupId()) || HUDSON_ECLIPSE_CORE_GROUP_ID.equals(a.getGroupId())) &&
                     HUDSON_CORE_ARTIFACT_ID.equals(a.getArtifactId())) {
                 log.info("Targeting Hudson-Version: "+a.getVersion());
                 return a.getVersion();
