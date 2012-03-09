@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.jvnet.hudson.plugins</groupId>
         <artifactId>hudson-plugin-parent</artifactId>
-        <version>@hudson.version@</version><!-- which version of Hudson is this plugin built against? -->
+        <version>2.1.2</version><!-- which version of Hudson is this plugin built against? -->
     </parent>
 
     <!-- $ --><groupId>org.jvnet.hudson.tools</groupId><!-- /$ -->
@@ -15,6 +15,6 @@
 
     <packaging>hpi</packaging>
 
-    <name>MyNewPlugin</name>
+    <name>My New Plugin</name>
 
 </project>
